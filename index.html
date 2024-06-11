@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">   
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --marg-left: 9%;
+    --marg-right: 10%;
+    --container-back: white;
+}
+a {
+    text-decoration: none;
+}
+body {
+}
+.container {
+    height: 100vh;
+    background-color: var(--container-back);
+    margin-right: var(--marg-right);
+    font-size: 20px;
+    padding: 10px;
+    justify-content: center;
+}
+.header-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header-container {
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 2px 0px 0px rgba(0, 0, 0, 0.1);
+    padding-left: var(--marg-left);
+    padding-right: var(--marg-right);
+}
+.leftmenu {
+    display: flex;
+    gap: 1rem;
+}
+.logo {
+    position: relative;
+    top: 0%;
+    color: rgb(72, 17, 123);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    font-size: xx-large;
+}
+.menu {
+    display: flex;
+    gap: 0.5rem;
+}
+.menu a {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 20px;
+    color: black;
+}
+
+.rightmenu a {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 20px;
+}
+.menu a:hover,
+.rightmenu a:hover,
+a.link:hover {
+    background-color: rgb(33, 33, 90);
+    color: #fff;
+}
+a.signup,
+a.link {
+    font-size: large;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    background-color: indigo;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+a.signup:hover,
+.link {
+    color: #fff;
+    background-color: rgb(33, 33, 90);
+}
+.section-one {
+    padding: 2rem;
+    display: flex;
+    gap: 80px;
+    height: 90%;
+    width: 90%;
+    flex-direction: row;
+    margin-left: var(--marg-left);
+}
+.picture img {
+    width: 145%;
+    height: 100%;
+    border-radius: 20px;
+}
+.wordings {
+    width: 85%;
+    height: 90vh;
+}
+.picture {
+    width: 70%;
+}
+.wordings h6 {
+    text-transform: uppercase;
+    color: gray;
+    letter-spacing: 1px;
+    line-height: 50px;
+    padding: 1rem;
+}
+.para {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 60px;
+    padding: 1rem;
+}
+.para2 {
+    padding: 1rem;
+    line-height: 30px;
+    font-size: 21px;
+}
+.link {
+    padding: 1rem;
+    line-height: 100px;
+}
+.para3 {
+    padding: 20px;
+    text-align: center;
+    font-size: 40px;
+    font-style: inherit;
+}
+.subpara {
+    padding: 20px;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-style: inherit;
+    color: gray;
+    padding: 1rem;
+}
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: var(--marg-left);
+    font-size: 20px;
+}
+.card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1;
+    margin: 2rem 0;
+    color: gray;
+}
+.icon {
+    padding: 8px;
+    margin-top: 70px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: bisque; 
+}
+.arrow{
+    margin-left: 10px;
+    padding: 1px;
+}
+.card-description {
+    margin-top: 20px;
+}
+.picture2 img {
+    width: 75%;
+    height: 100%;
+    border-radius: 20px;
+}
+.picture2 {
+    width: 65%;
+    justify-content: row;
+    display: flex;
+    margin-top: -35%;
+    margin-left: 60%;
+}
+.section-three {
+    padding: 2rem;
+    display: flex;
+    gap: 70px;
+    height: 90%;
+    width: 90%;
+    flex-direction: row;
+    margin-left: var(--marg-left);
+}
+.wordings3 h6 {
+    text-transform: uppercase;
+    color: gray;
+    letter-spacing: 1px;
+    padding: 10px;
+    margin-top: 10%;
+}
+.para4 ,.para3{
+    padding: 20px;
+    text-align: center;
+    font-size: 40px;
+    font-style: inherit;
+    margin-left: 10%;
+}
+
+.subpara2 {
+    text-align: center;
+    margin-left: 10%;
+    font-size: x-large;
+    color: gray;
+}
+.subpara3 {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: inherit;
+    color: gray;
+    line-height: 30px;
+}
+.para5 {
+    line-height: 50px;
+    font-size: 30px;
+}
+.learn {
+    font-size: large;
+    padding: 1.2rem;
+    line-height: 150px;
+}
+.picture3 img {
+    width: 10%;
+}
+.picture3 {
+    display: flex;
+    margin-top: 0%;
+    justify-content: center;
+}
+.subpara4,
+.subpara5 {
+    text-align: center;
+    line-height: 50px;
+    font-size: x-large;
+}
+.subpara5 {
+    color: grey;
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    background-color: rgb(3, 3, 41);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin: 3rem auto;
+    width: 80%;
+    border-radius: 10px;
+}
+.banner-content {
+    max-width: 800px;
+}
+.banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    width: 52vw;
+}
+.banner-btn {
+    font-size: 1rem;
+}
+footer {
+    background-color: rgb(244, 238, 230);
+    padding: 5rem 0;
+    width: 99vw;
+    height: 39vw;
+}
+.banner-content2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    margin-left: 11rem;
+}
+.banner-content2 p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #333;
+}
+.banner-content2 a {
+    color: #333;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: underline;
+    display: block;
+    margin: 0.5rem;
+}
+.banner-content2 a:hover {
+    text-decoration: underline;
+}
+.banner-content3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-left: 10.5rem;
+}
+.banner-content3 p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    color: #333;
+}
+.banner-content3 a {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    margin: 0.5rem;
+    text-decoration: underline;
+}
+.banner-content3 a:hover {
+    text-decoration: underline;
+}
+.picture4 img {
+    width: 50px;
+    margin-top: 70px;
+    margin-left: 11rem;
+}
+footer h3 {
+    padding-top: 2rem;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 2rem;
+}
+.footer-icons a {
+    color: #333;
+    text-decoration: none;
+}
+.footer-icons a:hover {
+    text-decoration: underline;
+}
+.para1 {
+    text-align: center;
+    font-size: large;
+}
+.icon1 {
+    display: flex;
+    margin-left: 11rem;
+    padding: 10px;
+}
+footer h6 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 20px;
+    text-align: center;
+    font-size: x-large;
+}
+footer .footer-bottom {
+    padding-top: 2rem;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+}
+.picture4{
+    margin-left: 85%;
+}
+
+/* Media Query */
+@media  (max-width: 900px) and (min-width: 380px) {
+    .menu {
+        display: none;
+    }
+    .sign {
+        display: none;
+    }
+    .res-menu {
+        display: none;
+        
+    }
+    .section-one ,.section-three,.section-two{
+        flex-direction: column;
+        font-size: small;
+    }
+    .wordings {
+        
+        width: 50%;
+        height: 20px;
+        order: 1;
+    }
+    .picture {
+        width: 80%;
+    }
+    .cards-container {
+        flex-direction: column;
+    }
+    .picture {
+        width: 74%;
+    }
+    .picture2 {
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
+        justify-content: center;
+    }
+    .picture2 img {
+        width: 100%;
+        height: auto;
+    }
+    .banner-content p {
+        width: 80vw;
+        height: 2vh;
+    }
+    footer {
+        height: auto;
+    }
+    .banner-content2 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+        
+    }
+    .banner-content3 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+    }
+    .picture4 {
+        margin-top: 2rem;
+        margin-left: 0;
+        text-align: center;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .para, .para2, .para3, .para4, .para5, .subpara, .subpara2, .subpara3, .subpara4, .subpara5 {
+        font-size: rem; /* Adjusted font size */
+        line-height: rem; /* Adjusted line height */
+    }
+    .para{
+        font-size: 2rem; /* Adjusted font size */
+        width: 100vw;
+        line-height: 50px;
+        text-align: center;
+
+    }
+    .para2{
+        font-size: 1rem; /* Adjusted font size */
+        width: 100vw;
+        text-align: center;
+    }
+    a.link{
+        font-size: small;
+        padding: 5px; 
+        display:inline;
+        justify-content: center;
+    }
+    .para3 {
+        font-size: 1.5rem; /* Adjusted font size */
+        /* Adjusted line height */
+    }
+    .para4 {
+        justify-content: center;
+        margin-top: 130%;
+        font-size: 1.8rem; 
+    }
+    .para5 {
+        font-size: 1.2rem; /* Adjusted font size */
+        line-height: 1.5rem; /* Adjusted line height */
+    }
+
+}
+</style>
+<body>
+    <div class="container">     
+    <div class="container">
+         <div class="header-container" style="margin-right: -0;">
+           <header class="header-one">
+               <div class="leftmenu">
+                   <a href="" class="logo" style="margin-top: -13px;">Podia</a>
+                   <nav class="menu" >
+                       <a href="" class="menu-item">Website<ion-icon name="chevron-down-outline" class="arrow"></ion-icon></a>
+                       <a href="" class="menu-item">Email<ion-icon name="chevron-down-outline" class="arrow"></ion-icon></a>
+                       <a href="" class="menu-item">Sell<ion-icon name="chevron-down-outline" class="arrow"></ion-icon></a>
+                       <a href="" class="menu-item" style="padding: 2px;">Pricing</a>
+                       <a href="" class="menu-item">Resources<ion-icon name="chevron-down-outline" class="arrow"></ion-icon></a>
+                   </nav>
+               </div>
+               <div class="rightmenu">
+                   <a href="" class="Login">Login</a>
+                   <a href="" class="signup">Sign Up free</a>
+               </div>
+           </header>
+       </div>
+      <section class="section-one" style="margin-top: 8%;">
+        <div class="wordings">
+            <h6>DIGITAL PRODUCTS</h6>
+            <p class="para">Sell online courses, <br>coaching sessions,<br> webinars, workshops,<br>ebooks, and anything you can think of on Podia</p>
+            <p class="para2">Get everything you need in one place that you own. Podia <br>takes care of hosting products, taking payments, and getting <br>products to your customers. And you always control your own <br>work.</p>
+            <a class="link" href="##">Get your free Account</a>
+        </div> 
+       <div class="picture">
+           <img src="./section-one.png" alt="">
+       </div>
+      </section>
+   </div>
+   </div>
+   <section class="section-two" style="margin-top: 8%;">
+    <div class="wordings2">
+      <h1 class="para4" style="text-decoration: none;">All you have to do is make the product. Podia takes care of the <br>details for you.</h1>
+      <p class="subpara2">Podia lets you make your sales page, take payments, and give your customers access all in one place. Host<br> and sell your products without needing to figure out a handful of new tools.</p>
+    <div class="picture">
+    
+    </div>
+   </section>
+    <div class="cards-container" style="margin-left: 15%;">
+        <div class="card">
+            <ion-icon name="cart-outline" style=" padding: 20px;"  class="icon"></ion-icon>
+            <div class="card-content" style="margin-top: 5%;">
+                <h3 class="card-title"style="color: black;">Checkout and sales are handled for you</h3>
+                <p class="card-description" style="margin-top: 30px;">You don’t have to figure out a bunch of tools or website embeds. Just connect a payment provider and your Podia site takes care of payments for you.</p>
+            </div>
+        </div>
+        <div class="card">
+            <ion-icon name="exit-outline" style=" padding: 20px;" class="icon"></ion-icon>
+            <div class="card-content" style="margin-top: 5%;">
+                <h3 class="card-title"style="color: black;">Your customers log in, and your products are there for them</h3>
+                <p class="card-description">Your Podia site handles access to products for you. Everything is in one place. When your customers buy a product, they get a log in. After that, they can see all the products they’ve bought from you.</p>
+            </div>
+        </div>
+        <div class="card">
+            <ion-icon name="cloud-upload-outline" style="padding: 20px;" class="icon"></ion-icon>
+            <div class="card-content" style="margin-top: 5%;">
+                <h3 class="card-title" style="color: black;">Upload your product. Make your sales page. Done.</h3>
+                <p class="card-description">You could sell a digital product by this afternoon. Podia handles hosting, sales pages, checkout, and delivery. All you need is something to sell.</p>
+            </div>
+        </div>
+    </div>
+   </div>
+   
+   <section class="section-three" style="margin-top: 8%;">
+    <div class="wordings3">
+      <h1 class="para3" style="padding: 10px;">What kinds of products can you sell with Podia?</h1>
+      <p class="subpara2" style="margin-top: 30px;">Podia gives you the flexibility to sell whatever you want. That means you have more ways to grow<br> your creator business.</p>
+      <h6>ONLINE COURSES</h6>
+      <h2 class="para5">Beautiful online courses you <br>can build in moments</h1>
+      <p class="subpara3" >Make a beautiful online course for your customers. Podia hosts your <br>course. That means all the lessons, files, and videos you want handled <br>for you.</p>
+      <a class="learn" href="##">Learn more about courses</a><span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+      <div class="picture2">
+        <img src="./section-two.png" alt="">
+    </div>
+    </div>
+   </section>
+   <div class="picture3">
+    <img src="./Stars__1_.png" alt="">
+   </div>
+   <p class="subpara4">I’ve wanted to offer e-courses for a while but always felt overwhelmed with how to set it up. Podia has<br> made it super easy.</p>
+   <p class="subpara5">— Joy Cho, Oh Joy! Academy</p>
+   <section class="section-three" style="margin-top: 8%;">
+    <div class="wordings3">
+      <h6>DIGITAL DOWNLOADS</h6>
+      <h2 class="para5">Ebooks, templates, and any file type you can <br>think of</h1>
+      <p class="subpara3">Have an ebook to sell? Templates you love? Podia makes it easy to <br>spin up a sales page and sell ebooks, templates, audio files, video<br> files, spreadsheets, and any other file type.</p>
+      <a class="learn" href="##">Learn more about downloads</a><span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+      <div class="picture2">
+        <img src="./digital_products-downloads.png" alt="">
+    </div>
+    </div>
+   </section>
+   <div class="picture3">
+    <img src="./Stars__1_.png" alt="">
+   </div>
+   <p class="subpara4">We didn’t have to stress about technical details or custom coding. Using Podia made selling our first<br> eBook quick, efficient, and fun.</p>
+   <p class="subpara5">— Matt & Steph, Plant-based food bloggers</p>
+   
+   <section class="section-three" style="margin-top: 8%;">
+    <div class="wordings3">
+     
+      <h6>COACHING</h6>
+      <h2 class="para5" style="margin-left: px;">One-on-one coaching and consultations,<br> with billing managed for you</h1>
+      <p class="subpara3">Sometimes your students want one-on-one attention. Podia makes it <br> for you to charge for coaching sessions and consultations.</p>
+      <a class="learn" href="##">Learn more about coaching </a><span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+      <div class="picture2">
+        <img src="./digital_products-coaching.png" alt="">
+    </div>
+    </div>
+   </section>
+   <div class="picture3">
+    <img src="./Stars__1_.png" alt="">
+   </div>
+   <p class="subpara4">Podia just works. It’s easy to use and includes everything you need to sell digital products. I’ve tried all<br> the alternatives, and Podia is hard to beat..</p>
+   <p class="subpara5">— Shawn Leamon, Divorce and Your Money</p>
+   
+   <section class="section-three" style="margin-top: 8%;">
+    <div class="wordings3">
+      <h6>WEBINARS</h6>
+      <h2 class="para5" style="margin-left: px;">Webinars and workshops with registration <br>and payment in one place</h1>
+      <p class="subpara3">How can you charge for your webinars and workshops? Do it from<br> your Podia site. Set up a paid webinar product and your customers<br> can register straight from your website.</p>
+      <a class="learn" href="##">Learn more about webinars </a><span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+      <div class="picture2">
+        <img src="./digital_products-webinars (1).png" alt="">
+    </div>
+    </div>
+   </section>
+   <section class="box">
+    <div class="banner-content">
+        <h1>Get your free Podia account</h1>
+        <p class="join">Join the 150,000+ creators who use Podia to create websites, sell digital products, and build online communities.</p>
+        <a class="link" href="link">Sign up free</a>
+    </div>
+</section>
+<footer>
+    <div class="banner-content2">
+        <p class="list1">Platform</p>
+        <a class="list-a" href="##">Pricing</a>
+        <a class="list-a" href="##">Sign up free</a>
+        <a class="list-a" href="##">Community</a>
+        <a class="list-a" href="##">Website builder</a>
+        <a class="list-a" href="##">Digital products</a>
+        <a class="list-a" href="##">Email marketing</a>
+    </div>
+    <div class="banner-content2">
+        <p class="list1">Support</p>
+        <a class="list-a" href="##">Contact us</a>
+        <a class="list-a" href="##">Help center</a>
+        <a class="list-a" href="##">Hire a Podia pro</a>
+        <a class="list-a" href="##">Creator community</a>
+        <a class="list-a" href="##">Podia 101</a>
+    </div>
+    <div class="banner-content2">
+        <p class="list1">Features</p>
+        <a class="list-a" href="##">Online courses</a>
+        <a class="list-a" href="##">Downloads</a>
+        <a class="list-a" href="##">Webinars</a>
+        <a class="list-a" href="##">Coaching</a>
+        <a class="list-a" href="##">All features</a>
+    </div>
+    <div class="banner-content2">
+        <p class="list1">Compare</p>
+        <a class="list-a" href="##">Kajabi</a>
+        <a class="list-a" href="##">Teachable</a>
+        <a class="list-a" href="##">Thinkific</a>
+        <a class="list-a" href="##">Patreon</a>
+        <a class="list-a" href="##">Gumroad</a>
+        <a class="list-a" href="##">Podia alternatives</a>
+    </div>
+    <div class="banner-content2">
+        <p class="list1">Resources</p>
+        <a class="list-a" href="##">Examples</a>
+        <a class="list-a" href="##">Demo</a>
+        <a class="list-a" href="##">Creator stories</a>
+        <a class="list-a" href="##">Blog</a>
+        <a class="list-a" href="##">Free tools</a>
+        <a class="list-a" href="##">All resources</a>
+    </div>
+    <div class="banner-content2">
+        <p class="list1">Podia</p>
+        <a class="list-a" href="##">Jobs</a>
+        <a class="list-a" href="##">About</a>
+        <a class="list-a" href="##">Branding</a>
+        <a class="list-a" href="##">Reviews</a>
+        <a class="list-a" href="##">Refer-a-creator</a>
+        <a class="list-a" href="##">Affiliates</a>
+    </div>
+    <div class="banner-content2">
+        <p class="list1">Social</p>
+        <a class="list-a" href="##">Twitter</a>
+        <a class="list-a" href="##">Facebook</a>
+        <a class="list-a" href="##">Instagram</a>
+        <a class="list-a" href="##">YouTube</a>
+        <a class="list-a" href="##">Digital products</a>
+        <a class="list-a" href="##">Email marketing</a>
+    </div>
+    <div class="banner-content3">
+        <p class="list">Podia Labs, Inc. © 2024</p>
+        <a class="list-a" href="##">Terms</a>
+        <a class="list-a" href="##">Privacy</a>
+    </div>
+    <div class="picture4">
+        <img src="./b02b181fa0a64827af0df50b92383934.png" alt="">
+    </div>
+
+</footer> 
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>   
+</body>
+</html>
